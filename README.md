@@ -57,7 +57,7 @@ const comp = () => {
                             }
                              </ul>
            
-                             <p>OR or you can do that:</p>
+                             <p>OR you can do that:</p>
            
                              <ScissorsIcon size={'5%'}/>
                          </>);
