@@ -22,20 +22,7 @@ open **http://localhost:3000**
 import React from 'react';
 import {
         Icon,
-            AlignJustifyIcon,
-            ChainBrokenLcon,
-            BoldIcon,
-            AlignCenterIcon,
-            ColumnsIcon,
-            EraserIcon,
-            FileTextOIcon,
-            HeaderIcon,
-            ListIcon,
-            OutdentIcon,
-            RepeatIcon,
-            ScissorsIcon,
-            TableIcon,
-            ThLargeIcon,} from './components/Icons';
+            ScissorsIcon} from './components/Icons';
 
 const comp = () => {
            
