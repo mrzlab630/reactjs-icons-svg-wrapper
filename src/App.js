@@ -45,9 +45,6 @@ const App = () => {
                  }
                   </ul>
 
-                  <p>OR or you can do that:</p>
-
-                  <ScissorsIcon size={'5%'}/>
               </div>);
             };
 
