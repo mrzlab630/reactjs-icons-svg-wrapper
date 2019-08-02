@@ -1,1 +1,0 @@
-{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,KACI,aACJ,CAEA,QACI,QAAS,CACT,SACJ,CACA,WACI,eAAgB,CAChB,cAAe,CACf,YACJ","file":"main.49a69e55.chunk.css","sourcesContent":[".App{\n    padding: 100px;\n}\n\n.App ul{\n    margin: 0;\n    padding: 0;\n}\n.App ul li{\n    list-style: none;\n    display: inline;\n    padding:10px;\n}"]}

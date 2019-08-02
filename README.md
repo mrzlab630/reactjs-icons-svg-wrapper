@@ -1,7 +1,7 @@
 ## Icons collection And svg Wrapper for React Js
 
 
-### [DEMO](https://reactjs.org/)
+### [DEMO](https://mrzlab630.github.io/reactjs-icons-svg-wrapper/)
 <br>
 <br>
 

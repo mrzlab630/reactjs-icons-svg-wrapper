@@ -2,6 +2,11 @@
     padding: 100px;
 }
 
+.App h1{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
 .App ul{
     margin: 0;
     padding: 0;

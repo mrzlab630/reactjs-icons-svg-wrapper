@@ -1,6 +1,6 @@
 import React from 'react';
 import {Icon,ScissorsIcon} from './components/Icons';
-import './App.css';
+import './assets/css/App.css';
 
 
 
@@ -36,6 +36,9 @@ const App = () => {
 
 
               return (<div className={`App`}>
+
+                  <h1>Icons collection And svg Wrapper for React Js</h1>
+
                   <ul>
                  {
                      renderIcons
