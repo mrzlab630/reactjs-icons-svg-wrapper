@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Icon,ScissorsIcon} from './components/Icons';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+
+
+const App = () => {
+
+
+    const iconsList = ["align-justify",
+                        "chain-broken",
+                        "table",
+                        "th-large",
+                        "bold",
+                        "align-center",
+                        "columns",
+                        "eraser",
+                        "file-text-o",
+                        "header",
+                        "list",
+                        "outdent",
+                        "repeat",
+                        "scissors"
+                    ];
+
+
+
+
+
+    const renderIcons = iconsList.map((itm,idx) =>(
+                                                        <li key={idx}>
+                                                        <Icon name={itm} color={'#00456b'} size={'5%'}/>
+                                                        </li>
+                                                        ));
+
+
+              return (<div className={`App`}>
+                  <ul>
+                 {
+                     renderIcons
+                 }
+                  </ul>
+
+                  <p>OR or you can do that:</p>
+
+                  <ScissorsIcon size={'5%'}/>
+              </div>);
+            };
 
 export default App;

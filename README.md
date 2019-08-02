@@ -1,68 +1,152 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Icons collection And svg Wrapper for React Js
 
-## Available Scripts
 
-In the project directory, you can run:
+### [DEMO](https://reactjs.org/)
+<br>
+<br>
 
-### `npm start`
+## Development
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**yarn install / npm install**
+<br>
+**yarn start / npm start**
+<br>
+open **http://localhost:3000**
+<br>
+<br>
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## how to use it.
 
-### `npm test`
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+import React from 'react';
+import {
+        Icon,
+            AlignJustifyIcon,
+            ChainBrokenLcon,
+            BoldIcon,
+            AlignCenterIcon,
+            ColumnsIcon,
+            EraserIcon,
+            FileTextOIcon,
+            HeaderIcon,
+            ListIcon,
+            OutdentIcon,
+            RepeatIcon,
+            ScissorsIcon,
+            TableIcon,
+            ThLargeIcon,} from './components/Icons';
 
-### `npm run build`
+const comp = () => {
+           
+           
+               const iconsList = ["align-justify",
+                                   "chain-broken",
+                                   "table",
+                                   "th-large",
+                                   "bold",
+                                   "align-center",
+                                   "columns",
+                                   "eraser",
+                                   "file-text-o",
+                                   "header",
+                                   "list",
+                                   "outdent",
+                                   "repeat",
+                                   "scissors"
+                               ];
+      
+     
+               const renderIcons = iconsList.map((itm,idx) =>(
+                                                                   <li key={idx}>
+                                                                   <Icon name={itm} color={'#00456b'} size={'5%'}/>
+                                                                   </li>
+                                                                   ));
+           
+                 return (<>
+                             <ul>
+                            {
+                                renderIcons
+                            }
+                             </ul>
+           
+                             <p>OR or you can do that:</p>
+           
+                             <ScissorsIcon size={'5%'}/>
+                         </>);
+                       };
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
+<br>
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Props
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* style = {}
+* color = '#000'
+* size = '100%'
+* className = ''
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## how to add my svg.
 
-## Learn More
+* go to src/components/Icons
+* add file: MySvg.js
+* add cod to MySvg.js:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+import React from 'react';
+import IconWrapper from './IconWrapper';
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+const MySvg = props => {
 
-### Code Splitting
+    return <IconWrapper
+        viewBox = {'0 0 1792 1792'}
+        data = {"M1792 1344v128q0 26-19 45t-45 19h-1664q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1664q26 0 45 19t19 45zm-384-384v128q0 26-19 45t-45 19h-896q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h896q26 0 45 19t19 45zm256-384v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm-384-384v128q0 26-19 45t-45 19h-640q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h640q26 0 45 19t19 45z"}
+        {...props} />;
+};
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+export default MySvg;
 
-### Analyzing the Bundle Size
+```
+where
+<br>
+data={} -- < path d="****" /> 
+<br>
+and 
+<br>
+viewBox -- viewBox="* * **** ****"
+<br>
+from svg
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+* add import MySvg from './MySvg' to index.js
+* add to export{MySvg, ...}  to index.js
+* add import {MySvg,... } from './' to Icon.js
+* add switch case "my-svg": return <MySvg {...props} />;
+* FIN.
 
-### Making a Progressive Web App
+<br>
+<br>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Donation
+If this project help you reduce time to develop, you can give me a cup of coffee :)
+<br><br>
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3FYLY9YVBTSEL)
+<br>
+<br>
 
-### Advanced Configuration
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+The MIT License.
 
-### Deployment
+<br>
+<br>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## By
 
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**mrZ** - mrz@mrzlab630.pw
