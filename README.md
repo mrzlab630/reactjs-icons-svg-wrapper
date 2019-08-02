@@ -82,9 +82,9 @@ const comp = () => {
 
 ## how to add my svg.
 
-* go to src/components/Icons
-* add file: MySvg.js
-* add cod to MySvg.js:
+* go to **src/components/Icons**
+* add file: **MySvg.js**
+* add cod to **MySvg.js**:
 
 ```
 import React from 'react';
@@ -111,11 +111,11 @@ viewBox -- viewBox="* * **** ****"
 <br>
 from svg
 
-* add import MySvg from './MySvg' to index.js
-* add to export{MySvg, ...}  to index.js
-* add import {MySvg,... } from './' to Icon.js
-* add switch case "my-svg": return <MySvg {...props} />;
-* FIN.
+* add **import MySvg from './MySvg'** to **index.js**
+* add to **export{MySvg, ...}**  to **index.js**
+* add **import {MySvg,... } from './'** to **Icon.js**
+* add to **switch** -- **case "my-svg": return <MySvg {...props} />;**
+* **FIN.**
 
 <br>
 <br>
